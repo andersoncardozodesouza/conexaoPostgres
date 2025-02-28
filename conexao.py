@@ -45,10 +45,10 @@ class Conexao:
                 host="52.67.135.147",    # Ou o endereço do servidor PostgreSQL
                 port="8123"          # A porta padrão do PostgreSQL
             )
-            print("Conexão com Banco 2 bem-sucedida!")
+            print("Conexão com Banco 3 bem-sucedida!")
             return conn
         except OperationalError as e:
-            print(f"Erro ao conectar ao Banco 2: {e}")
+            print(f"Erro ao conectar ao Banco 3: {e}")
             return None 
         
 
