@@ -1,5 +1,6 @@
 import psycopg2
 from psycopg2 import OperationalError
+from clickhouse_connect import get_client
 
 class Conexao:
     @staticmethod
@@ -33,6 +34,22 @@ class Conexao:
         except OperationalError as e:
             print(f"Erro ao conectar ao Banco 2: {e}")
             return None 
+
+    @staticmethod
+    def conectar_banco_3():
+        try:
+            conn = psycopg2.connect(
+                dbname="terraboapm",     # Substitua pelo nome do seu segundo banco de dados
+                user="analytics",     # Substitua pelo usuário do banco 2
+                password="toh4hahph9ooj4ja3Ohcohaic4ohpe",   # Substitua pela senha do banco 2
+                host="52.67.135.147",    # Ou o endereço do servidor PostgreSQL
+                port="8123"          # A porta padrão do PostgreSQL
+            )
+            print("Conexão com Banco 2 bem-sucedida!")
+            return conn
+        except OperationalError as e:
+            print(f"Erro ao conectar ao Banco 2: {e}")
+            return None 
         
 
     @staticmethod
@@ -42,6 +59,10 @@ class Conexao:
             return Conexao.conectar_banco_1()
         elif banco == 2:
             return Conexao.conectar_banco_2() 
+        elif banco == 3:
+            return Conexao.conectar_banco_3() 
         else:
-            print("Banco inválido. Escolha entre 1 ou 2")
+            print("Banco inválido. Escolha entre 1,2,3")
             return None
+
+from clickhouse_connect import get_client

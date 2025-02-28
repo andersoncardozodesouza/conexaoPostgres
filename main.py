@@ -5,7 +5,12 @@ if __name__ == "__main__":
     conexao = Conexao.testar_conexao(banco_teste)
 
     if conexao:
-        print(f"Conexão com Banco {banco_teste} foi bem-sucedida!")
+        if banco_teste == 1:
+            print(f"Conexão com Banco {banco_teste} - Terra Boa foi bem-sucedida!")
+        if banco_teste == 2:
+            print(f"Conexão com Banco {banco_teste} - Sarandi foi bem-sucedida!")
+        else:
+            print(f"Conexão com Banco {banco_teste} - Terra Boa ClickHouse foi bem-sucedida!")
         conexao.close()  # Fechar a conexão após o teste
     else:
         print(f"Falha ao conectar ao Banco {banco_teste}.")
