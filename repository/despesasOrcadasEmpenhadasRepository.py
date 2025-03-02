@@ -1,4 +1,4 @@
-from conexao import Conexao
+from conexao.conexao import Conexao
 from model.despesasOrcadasEmpenhadas import DespesasOrcadasEmpenhadas
 import psycopg2
 
