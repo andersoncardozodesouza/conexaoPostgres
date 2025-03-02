@@ -24,7 +24,7 @@ class Conexao:
         try:
             conn = psycopg2.connect(
                 dbname="jrsistemas",     # Substitua pelo nome do seu segundo banco de dados
-                user="jrsisteas",     # Substitua pelo usuário do banco 2
+                user="jrsistemas",     # Substitua pelo usuário do banco 2
                 password="jrm@r1nga",   # Substitua pela senha do banco 2
                 host="acesso.terraboa.eloweb.net",    # Ou o endereço do servidor PostgreSQL
                 port="5432"          # A porta padrão do PostgreSQL
