@@ -14,7 +14,7 @@ class Api:
 
     @app.route('/api/despesasOrcadasEmpenhadas', methods=['GET'])
     def obter_despesassOrcadasEmpenhadas():
-        entidades = request.args.getlist('entidades', type=str) 
+        idtce = request.args.getlist('idtce', type=str) 
         idquadrimestres = request.args.getlist('idquadrimestres', type=str)
         ano = request.args.getlist('ano', type=int)
         bancoEloJr = request.args.getlist('bancoEloJr', type=int)
@@ -22,11 +22,11 @@ class Api:
 
 
         
-        print(f"Entidades: {entidades}")
+        print(f"Entidades: {idtce}")
         print(f"ID Quadrimestres: {idquadrimestres}")
         print(f"Ano: {ano}")
 
-        if not entidades:
+        if not idtce:
             return jsonify({"error": "entidades são obrigatórios"}), 400 
 
         if not idquadrimestres:
@@ -40,7 +40,7 @@ class Api:
             return jsonify({"error": "ano é obrigatório"}), 400
 
         try:
-            despesas = despesasOrcadasEmpenhadasService.obter_despesasOrcadasEmpenhadasService(bancoEloJr, entidades, idquadrimestres, ano)
+            despesas = despesasOrcadasEmpenhadasService.obter_despesasOrcadasEmpenhadasService(bancoEloJr, idtce, idquadrimestres, ano)
             print(despesas)
             if not despesas:
                 raise ValueError("Nenhuma despesa encontrada.")
