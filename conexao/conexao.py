@@ -23,9 +23,9 @@ class Conexao:
     def conectar_banco_2():
         try:
             conn = psycopg2.connect(
-                dbname="elotech",     # Substitua pelo nome do seu segundo banco de dados
-                user="elotech",     # Substitua pelo usuário do banco 2
-                password="elo",   # Substitua pela senha do banco 2
+                dbname="jrsistemas",     # Substitua pelo nome do seu segundo banco de dados
+                user="jrsisteas",     # Substitua pelo usuário do banco 2
+                password="jrm@r1nga",   # Substitua pela senha do banco 2
                 host="acesso.terraboa.eloweb.net",    # Ou o endereço do servidor PostgreSQL
                 port="5432"          # A porta padrão do PostgreSQL
             )
@@ -39,11 +39,11 @@ class Conexao:
     def conectar_banco_3():
         try:
             conn = psycopg2.connect(
-                dbname="terraboapm",     # Substitua pelo nome do seu segundo banco de dados
-                user="analytics",     # Substitua pelo usuário do banco 2
-                password="toh4hahph9ooj4ja3Ohcohaic4ohpe",   # Substitua pela senha do banco 2
-                host="52.67.135.147",    # Ou o endereço do servidor PostgreSQL
-                port="8123"          # A porta padrão do PostgreSQL
+                dbname="jrsistemas",     # Substitua pelo nome do seu segundo banco de dados
+                user="jrsistemas",     # Substitua pelo usuário do banco 2
+                password="jrm@r1nga",   # Substitua pela senha do banco 2
+                host="acesso.terraboa.eloweb.net",    # Ou o endereço do servidor PostgreSQL
+                port="5432"          # A porta padrão do PostgreSQL
             )
             print("Conexão com Banco 3 bem-sucedida!")
             return conn
