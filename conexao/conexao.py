@@ -26,8 +26,8 @@ class Conexao:
                 dbname="elotech",     # Substitua pelo nome do seu segundo banco de dados
                 user="elotech",     # Substitua pelo usuário do banco 2
                 password="elo",   # Substitua pela senha do banco 2
-                host="45.174.186.160",    # Ou o endereço do servidor PostgreSQL
-                port="54323"          # A porta padrão do PostgreSQL
+                host="acesso.terraboa.eloweb.net",    # Ou o endereço do servidor PostgreSQL
+                port="5432"          # A porta padrão do PostgreSQL
             )
             print("Conexão com Banco 2 bem-sucedida!")
             return conn
